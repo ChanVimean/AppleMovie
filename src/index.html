@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apple Movies</title>
-  <link rel="stylesheet" href="./output.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Movies</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="icon" type="image/png" href="/public/apple.png" />
+  </head>
+  <body>
+    <nav class="bg-blue-200 w-full">
+      <div class="max-w-7xl mx-auto flex justify-between py-2">
+        <div class="flex gap-4 items-center">
+          <img src="/public/apple.png" alt="Logo" class="w-10 h-auto" />
+          <h1 class="text-xl font-semibold">Apple Movies</h1>
+        </div>
 
-  <nav class="flex justify-between bg-blue-300 py-4">
-    <img src="" alt="Logo">
+        <ul class="flex gap-4 items-center text-lg font-medium">
+          <li>Home</li>
+          <li>Category</li>
+          <li>About</li>
+          <li>News</li>
+        </ul>
 
-    <ul class="flex gap-4">
-      <li class="text-lg">Home</li>
-      <li class="text-lg">Category</li>
-      <li class="text-lg">About</li>
-      <li class="text-lg">News</li>
-    </ul>
+        <div class="flex items-center gap-4">
+          <input
+            type="text"
+            placeholder="Search movie here..."
+            class="w-72 bg-white py-2 px-4 rounded-lg shadow-inner outline-none"
+          />
+          <h2 class="font-medium">Tony Stark</h2>
+          <img
+            src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/11/Tony-Stark-MCU.jpg?w=1200&h=628&fit=crop"
+            alt="Profile"
+            class="w-10 h-10 rounded-full object-cover"
+          />
+        </div>
+      </div>
+    </nav>
 
-    <div class="flex">
-      <input type="text" placeholder="Search movie here...">
-      <img src="" alt="Profile">
-    </div>
-  </nav>
+    <section>Hero Section</section>
 
-  <section>Hero Section</section>
+    <section>Continue Watching</section>
+    <section>Action</section>
+    <section>Comedy</section>
+    <section>Sci-Fi</section>
+    <section>Crime</section>
+    <section>Horror</section>
 
-  <section>Continue Watching</section>
-  <section>Action</section>
-  <section>Comedy</section>
-  <section>Sci-Fi</section>
-  <section>Crime</section>
-  <section>Horror</section>
-
-  <footer></footer>
-
-</body>
+    <footer></footer>
+  </body>
 </html>
