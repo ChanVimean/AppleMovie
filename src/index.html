@@ -48,12 +48,36 @@
       </div>
     </nav>
 
-    <section class="mt-20">Hero Section</section>
-    <section>Continue Watching</section>
-    <section>Action</section>
+    <section>
+      <!-- <iframe
+          class="w-full h-[500px]"
+          src="https://www.youtube.com/embed/_W43cvY5WHg"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe> -->
+      <img
+        src="https://i.cdn.newsbytesapp.com/images/l70420220408162006.jpeg"
+        alt="Hero"
+        class="w-full h-[300px] md:h-[450px] lg:h-[600px] object-cover object-top"
+      />
+    </section>
+
+    <section class="p-4 lg:p-8 space-y-6">
+      <h1 class="text-4xl font-semibold">Action</h1>
+      <ul
+        id="movieList"
+        class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-8"
+      ></ul>
+    </section>
+
     <section>Comedy</section>
+
     <section>Sci-Fi</section>
+
     <section>Crime</section>
+
     <section>Horror</section>
 
     <footer
@@ -109,42 +133,203 @@
     <!-- Bottom Bar -->
     <ul class="flex lg:hidden justify-evenly text-xl bg-blue-200 py-4">
       <li>
-        <a
-          href="/src/index.html"
-          class="flex flex-col items-center space-y-2"
-        >
+        <a href="/src/index.html" class="flex flex-col items-center space-y-2">
           <i class="fa-solid fa-house"></i>
           <span>Home</span>
         </a>
       </li>
       <li>
-        <a
-          href="/src/index.html"
-          class="flex flex-col items-center space-y-2"
-        >
+        <a href="/src/index.html" class="flex flex-col items-center space-y-2">
           <i class="fa-solid fa-layer-group"></i>
           <span>Category</span>
         </a>
       </li>
       <li>
-        <a
-          href="/src/index.html"
-          class="flex flex-col items-center space-y-2"
-        >
+        <a href="/src/index.html" class="flex flex-col items-center space-y-2">
           <i class="fa-solid fa-circle-info"></i>
           <span>About</span>
         </a>
       </li>
       <li>
-        <a
-          href="/src/index.html"
-          class="flex flex-col items-center space-y-2"
-        >
+        <a href="/src/index.html" class="flex flex-col items-center space-y-2">
           <i class="fa-solid fa-newspaper"></i>
           <span>News</span>
         </a>
       </li>
     </ul>
 
+    <script>
+      const movieList = document.getElementById("movieList");
+
+      const movies = [
+        {
+          title: "Echoes of Tomorrow",
+          year: 2023,
+          genre: "Sci-Fi",
+          rating: 8.2,
+          description:
+            "A time traveler races against fate to prevent a future catastrophe caused by her own invention.",
+          poster:
+            "https://m.media-amazon.com/images/M/MV5BYTFiOTI4MGYtODQ0Mi00YTNhLTk5NTAtYTNmYjM5YmZiNTdjXkEyXkFqcGc@._V1_.jpg",
+        },
+        {
+          title: "Shattered Strings",
+          year: 2021,
+          genre: "Drama",
+          rating: 7.5,
+          description:
+            "A gifted violinist struggles to rebuild her career after a devastating accident.",
+          poster:
+            "https://m.media-amazon.com/images/I/81EFsgXptVL._UF894,1000_QL80_.jpg",
+        },
+        {
+          title: "Neon Ghosts",
+          year: 2024,
+          genre: "Cyberpunk Thriller",
+          rating: 8.0,
+          description:
+            "In a neon-lit city, a detective hunts a rogue AI that has learned how to love.",
+          poster:
+            "https://geo-media.beatport.com/image_size/1400x1400/ada85f1f-3acc-4240-9737-8246e10b3c0b.jpg",
+        },
+        {
+          title: "Beneath the Waves",
+          year: 2020,
+          genre: "Adventure",
+          rating: 7.3,
+          description:
+            "A marine biologist dives into the depths of the ocean to uncover an ancient secret civilization.",
+          poster:
+            "https://m.media-amazon.com/images/S/pv-target-images/9f0f5285b485bc2e9ced20a2e8135ab3ac171fa8b044cf2a4c93e3c48e682003.png",
+        },
+        {
+          title: "Paper Kingdom",
+          year: 2022,
+          genre: "Fantasy",
+          rating: 8.6,
+          description:
+            "A young girl discovers that her origami creations come to life in a hidden paper realm.",
+          poster:
+            "https://postercinema.eu/cdn/shop/files/kingdom-of-the-planet-of-the-apes_jfryb3zl.jpg?v=1715721125",
+        },
+        {
+          title: "Crimson Horizon",
+          year: 2019,
+          genre: "Action",
+          rating: 7.8,
+          description:
+            "A rogue pilot must lead a rebellion against a corrupt space empire.",
+          poster: "https://m.media-amazon.com/images/I/519xKML5VEL._SL500_.jpg",
+        },
+        {
+          title: "Still Life",
+          year: 2023,
+          genre: "Mystery",
+          rating: 8.1,
+          description:
+            "A reclusive painter becomes the prime suspect in a series of art-related murders.",
+          poster:
+            "https://images.squarespace-cdn.com/content/v1/5b18735a3917ee20d18a2117/1600185774974-6B5SKAP8269EU64JFWXA/stilllife_poster_lrg.jpg",
+        },
+        {
+          title: "The Orchard",
+          year: 2021,
+          genre: "Horror",
+          rating: 7.0,
+          description:
+            "A family moves to a quiet farm only to discover that the trees whisper their darkest secrets.",
+          poster:
+            "https://m.media-amazon.com/images/M/MV5BNjJiNWRmOGQtMDUyNi00MzQwLWI0ODctNWQ2MDc0NjE5ODk4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        },
+        {
+          title: "Parallel Hearts",
+          year: 2022,
+          genre: "Romance",
+          rating: 7.9,
+          description:
+            "Two strangers in parallel universes find a way to communicate through their dreams.",
+          poster:
+            "https://m.media-amazon.com/images/M/MV5BMGRhMTM5NDEtNGY0OC00MWJiLTk0NDItOTU3ZmI1Zjc3NjQ0XkEyXkFqcGc@._V1_.jpg",
+        },
+        {
+          title: "Steel and Shadow",
+          year: 2018,
+          genre: "Fantasy Action",
+          rating: 7.6,
+          description:
+            "A cursed knight seeks redemption in a world ruled by magic and machines.",
+          poster:
+            "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1650379030i/60845526.jpg",
+        },
+        {
+          title: "The Last Broadcast",
+          year: 2020,
+          genre: "Thriller",
+          rating: 7.4,
+          description:
+            "A late-night radio host receives a chilling call that blurs the line between fiction and reality.",
+          poster:
+            "https://freshcomics.s3.amazonaws.com/issue_covers/MAY141170.jpg",
+        },
+        {
+          title: "Glass Gardens",
+          year: 2024,
+          genre: "Drama",
+          rating: 8.3,
+          description:
+            "In a futuristic city, an architect battles corporate greed to preserve the last natural sanctuary.",
+          poster:
+            "https://m.media-amazon.com/images/M/MV5BZTc4ZmM0ZTMtNWI5Yy00Y2RiLThiMzgtZDQzNWZhZWYzZGE5XkEyXkFqcGc@._V1_.jpg",
+        },
+        {
+          title: "Wanderlight",
+          year: 2023,
+          genre: "Adventure",
+          rating: 8.0,
+          description:
+            "A runaway prince and a thief embark on a journey to find a mythical lantern said to grant freedom.",
+          poster:
+            "https://alekino.com/content/uploads/2024/10/Wander-of-Light-poster--815x1200.jpg",
+        },
+        {
+          title: "Silent Code",
+          year: 2025,
+          genre: "Tech Thriller",
+          rating: 8.4,
+          description:
+            "A cybersecurity analyst uncovers a hidden signal that could rewrite the internet itself.",
+          poster:
+            "https://m.media-amazon.com/images/M/MV5BMDNkN2E4YmYtOTcwMi00NmVlLTkyNTYtNGJhOWQyYjNjZjExXkEyXkFqcGc@._V1_.jpg",
+        },
+        {
+          title: "Avenger Endgame",
+          year: 2019,
+          genre: "Action",
+          rating: 9.2,
+          description:
+            "After the devastating events of Infinity War, the remaining Avengers assemble once more in a desperate attempt to reverse Thanos’ actions and restore balance to the universe. Bound by loss but driven by hope, Earth’s mightiest heroes must risk everything for one final stand.",
+          poster:
+            "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg",
+        },
+      ];
+
+      movieList.innerHTML = movies
+        .map(
+          (movie, index) => `
+            <li key="${index}" class="bg-blue-200 rounded-lg overflow-hidden shadow-sm">
+              <img src="${movie.poster}" alt="movie poster" class="h-80 w-full object-cover">
+              <article class="p-2 space-y-4">
+                <h2 class="font-semibold text-2xl">${movie.title}</h2>
+                <div class="flex justify-between">
+                  <p>Years ${movie.year}</p>
+                  <p>${movie.genre}</p>
+                </div>
+                <p>⭐ ${movie.rating}</p>
+              </article>
+            </li>
+          `
+        )
+        .join("");
+    </script>
   </body>
 </html>
