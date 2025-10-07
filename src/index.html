@@ -60,7 +60,7 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center bg-slate-800 p-8 text-white"
     >
       <!-- Useful links -->
-      <div class="space-y-4 text-center bg-pink-500">
+      <div class="space-y-4 text-center">
         <h2 class="text-xl font-semibold">Useful Links</h2>
 
         <ul class="font-medium text-gray-300 space-y-2">
@@ -72,7 +72,7 @@
       </div>
 
       <!-- Newsletter -->
-      <div class="space-y-4 bg-purple-500">
+      <div class="flex flex-col items-center lg:items-start space-y-4">
         <h2 class="text-xl font-semibold">Newsletter</h2>
         <input
           type="text"
@@ -89,7 +89,7 @@
       </div>
 
       <!-- Contact -->
-      <div class="space-y-4 bg-red-500 text-center lg:text-start">
+      <div class="space-y-4 text-center lg:text-start">
         <h2 class="text-xl font-semibold">Contact</h2>
 
         <p class="text-gray-300">
@@ -105,5 +105,46 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Bottom Bar -->
+    <ul class="flex lg:hidden justify-evenly text-xl bg-blue-200 py-4">
+      <li>
+        <a
+          href="/src/index.html"
+          class="flex flex-col items-center space-y-2"
+        >
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/src/index.html"
+          class="flex flex-col items-center space-y-2"
+        >
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Category</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/src/index.html"
+          class="flex flex-col items-center space-y-2"
+        >
+          <i class="fa-solid fa-circle-info"></i>
+          <span>About</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="/src/index.html"
+          class="flex flex-col items-center space-y-2"
+        >
+          <i class="fa-solid fa-newspaper"></i>
+          <span>News</span>
+        </a>
+      </li>
+    </ul>
+
   </body>
 </html>
